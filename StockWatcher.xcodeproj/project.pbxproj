@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A000000000000000000030 /* StockWatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000020 /* StockWatcherApp.swift */; };
+		A000000000000000000031 /* StockModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000021 /* StockModels.swift */; };
+		A000000000000000000032 /* StockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000022 /* StockAPIService.swift */; };
+		A000000000000000000033 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000023 /* StockViewModel.swift */; };
+		A000000000000000000034 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000024 /* PopoverView.swift */; };
+		A000000000000000000035 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000025 /* StockRowView.swift */; };
+		A000000000000000000036 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000026 /* NotificationManager.swift */; };
+		A000000000000000000037 /* WebChartWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000027 /* WebChartWindow.swift */; };
+		A000000000000000000050 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A000000000000000000051 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A000000000000000000009 /* StockWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A000000000000000000020 /* StockWatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockWatcherApp.swift; sourceTree = "<group>"; };
+		A000000000000000000021 /* StockModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModels.swift; sourceTree = "<group>"; };
+		A000000000000000000022 /* StockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAPIService.swift; sourceTree = "<group>"; };
+		A000000000000000000023 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
+		A000000000000000000024 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		A000000000000000000025 /* StockRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
+		A000000000000000000026 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		A000000000000000000027 /* WebChartWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebChartWindow.swift; sourceTree = "<group>"; };
+		A000000000000000000040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A000000000000000000051 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A000000000000000000012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A000000000000000000050 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000003 /* StockWatcher */,
+				A000000000000000000008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A000000000000000000003 /* StockWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000020 /* StockWatcherApp.swift */,
+				A000000000000000000040 /* Info.plist */,
+				A000000000000000000004 /* Models */,
+				A000000000000000000005 /* Services */,
+				A000000000000000000006 /* ViewModels */,
+				A000000000000000000007 /* Views */,
+			);
+			path = StockWatcher;
+			sourceTree = "<group>";
+		};
+		A000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000021 /* StockModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A000000000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000022 /* StockAPIService.swift */,
+				A000000000000000000026 /* NotificationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A000000000000000000006 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000023 /* StockViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A000000000000000000007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000024 /* PopoverView.swift */,
+				A000000000000000000025 /* StockRowView.swift */,
+				A000000000000000000027 /* WebChartWindow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A000000000000000000008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000009 /* StockWatcher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A000000000000000000010 /* StockWatcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A000000000000000000016 /* Build configuration list for PBXNativeTarget "StockWatcher" */;
+			buildPhases = (
+				A000000000000000000011 /* Sources */,
+				A000000000000000000012 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockWatcher;
+			productName = StockWatcher;
+			productReference = A000000000000000000009 /* StockWatcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					A000000000000000000010 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = A000000000000000000015 /* Build configuration list for PBXProject "StockWatcher" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = A000000000000000000002;
+			productRefGroup = A000000000000000000008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A000000000000000000010 /* StockWatcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A000000000000000000011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A000000000000000000030 /* StockWatcherApp.swift in Sources */,
+				A000000000000000000031 /* StockModels.swift in Sources */,
+				A000000000000000000032 /* StockAPIService.swift in Sources */,
+				A000000000000000000033 /* StockViewModel.swift in Sources */,
+				A000000000000000000034 /* PopoverView.swift in Sources */,
+				A000000000000000000035 /* StockRowView.swift in Sources */,
+				A000000000000000000036 /* NotificationManager.swift in Sources */,
+				A000000000000000000037 /* WebChartWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A000000000000000000013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A000000000000000000014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A000000000000000000017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockWatcher/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stockwatcher.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A000000000000000000018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockWatcher/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stockwatcher.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A000000000000000000015 /* Build configuration list for PBXProject "StockWatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A000000000000000000013 /* Debug */,
+				A000000000000000000014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A000000000000000000016 /* Build configuration list for PBXNativeTarget "StockWatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A000000000000000000017 /* Debug */,
+				A000000000000000000018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A000000000000000000001 /* Project object */;
+}

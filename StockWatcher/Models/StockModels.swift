@@ -52,3 +52,33 @@ struct StockQuote: Codable, Equatable {
         String(format: "%@%.2f", change >= 0 ? "+" : "", change)
     }
 }
+
+// MARK: - Index
+
+struct IndexData: Identifiable {
+    let code: String
+    let name: String
+    var quote: IndexQuote?
+
+    var id: String { code }
+}
+
+struct IndexQuote {
+    let currentPrice: Double
+    let change: Double
+    let changePercent: Double
+    let timestamp: Date
+
+    var isUp: Bool { change >= 0 }
+    var isDown: Bool { change < 0 }
+
+    var priceStr: String { String(format: "%.2f", currentPrice) }
+
+    var changePercentStr: String {
+        String(format: "%@%.2f%%", change >= 0 ? "+" : "", changePercent)
+    }
+
+    var changeStr: String {
+        String(format: "%@%.2f", change >= 0 ? "+" : "", change)
+    }
+}

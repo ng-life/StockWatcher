@@ -17,8 +17,10 @@ struct PopoverView: View {
                 } else if showSettings {
                     settingsView
                 } else if viewModel.stocks.isEmpty {
-                    emptyStateView
+                    indexSectionView
                 } else {
+                    indexSectionView
+                    Divider()
                     stockListView
                 }
             }
@@ -71,6 +73,33 @@ struct PopoverView: View {
                     Image(systemName: "gearshape").font(.system(size: 12))
                 }
                 .buttonStyle(.plain).help("预警设置")
+            }
+        }
+        .padding(.horizontal, 12).padding(.vertical, 8)
+    }
+
+    // MARK: - Index Section
+
+    private var indexSectionView: some View {
+        HStack(spacing: 0) {
+            ForEach(viewModel.indices) { index in
+                VStack(spacing: 2) {
+                    Text(index.name)
+                        .font(.system(size: 10))
+                        .foregroundColor(.secondary)
+                    if let q = index.quote {
+                        Text(q.priceStr)
+                            .font(.system(size: 13, weight: .medium, design: .monospaced))
+                        Text(q.changePercentStr)
+                            .font(.system(size: 11, weight: .medium, design: .monospaced))
+                            .foregroundColor(q.isUp ? .red : .green)
+                    } else {
+                        Text("--")
+                            .font(.system(size: 13, design: .monospaced))
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .frame(maxWidth: .infinity)
             }
         }
         .padding(.horizontal, 12).padding(.vertical, 8)

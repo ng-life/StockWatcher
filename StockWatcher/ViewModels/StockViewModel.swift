@@ -5,6 +5,11 @@ import SwiftUI
 @MainActor
 final class StockViewModel: ObservableObject {
     @Published var stocks: [Stock] = []
+    @Published var indices: [IndexData] = [
+        IndexData(code: "s_sh000001", name: "上证指数", quote: nil),
+        IndexData(code: "s_sz399001", name: "深证成指", quote: nil),
+        IndexData(code: "s_sh000688", name: "科创50", quote: nil),
+    ]
     @Published var isRefreshing = false
     @Published var errorMessage: String?
 
@@ -94,9 +99,22 @@ final class StockViewModel: ObservableObject {
     // MARK: - Data
 
     func refresh() async {
-        guard !stocks.isEmpty else { return }
         isRefreshing = true
         errorMessage = nil
+
+        // Fetch indices (always, even with empty stock list)
+        let indexQuotes = await apiService.fetchIndices()
+        for i in indices.indices {
+            let code = indices[i].code
+            if let q = indexQuotes[code] {
+                indices[i].quote = q
+            }
+        }
+
+        guard !stocks.isEmpty else {
+            isRefreshing = false
+            return
+        }
 
         let codes = stocks.map(\.code)
         let quotes = await apiService.fetchQuotes(for: codes)

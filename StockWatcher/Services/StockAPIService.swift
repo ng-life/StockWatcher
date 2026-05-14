@@ -154,6 +154,53 @@ final class StockAPIService {
         return result
     }
 
+    // MARK: - Index
+
+    private let indexCodes = ["s_sh000001", "s_sz399001", "s_sh000688"]
+
+    func fetchIndices() async -> [String: IndexQuote] {
+        let list = indexCodes.joined(separator: ",")
+        guard let url = URL(string: "https://hq.sinajs.cn/list=\(list)") else { return [:] }
+
+        var request = URLRequest(url: url)
+        request.setValue("https://finance.sina.com.cn", forHTTPHeaderField: "Referer")
+
+        do {
+            let (data, _) = try await session.data(for: request)
+            guard let text = decodeGBK(data) else { return [:] }
+            return parseIndexResponse(text)
+        } catch {
+            return [:]
+        }
+    }
+
+    /// Sina index fields: name, current, change, changePercent, volume, amount, ...
+    private func parseIndexResponse(_ text: String) -> [String: IndexQuote] {
+        var result: [String: IndexQuote] = [:]
+
+        for code in indexCodes {
+            let varName = "hq_str_\(code)"
+            guard let line = text.components(separatedBy: "\n").first(where: { $0.contains(varName) }),
+                  let start = line.firstIndex(of: "\""),
+                  let end = line[line.index(after: start)...].firstIndex(of: "\"") else { continue }
+
+            let content = String(line[line.index(after: start)..<end])
+            let fields = content.components(separatedBy: ",")
+            guard fields.count >= 4,
+                  let current = Double(fields[1]),
+                  let change = Double(fields[2]),
+                  let changePercent = Double(fields[3]) else { continue }
+
+            result[code] = IndexQuote(
+                currentPrice: current,
+                change: change,
+                changePercent: changePercent,
+                timestamp: Date()
+            )
+        }
+        return result
+    }
+
     // MARK: - Helpers
 
     private func decodeGBK(_ data: Data) -> String? {

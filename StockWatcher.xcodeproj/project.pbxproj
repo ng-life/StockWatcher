@@ -16,6 +16,7 @@
 		A000000000000000000036 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000026 /* NotificationManager.swift */; };
 		A000000000000000000037 /* WebChartWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000027 /* WebChartWindow.swift */; };
 		A000000000000000000050 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A000000000000000000051 /* WebKit.framework */; };
+		A000000000000000000061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A000000000000000000060 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A000000000000000000026 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A000000000000000000027 /* WebChartWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebChartWindow.swift; sourceTree = "<group>"; };
 		A000000000000000000040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A000000000000000000060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A000000000000000000051 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 			children = (
 				A000000000000000000020 /* StockWatcherApp.swift */,
 				A000000000000000000040 /* Info.plist */,
+				A000000000000000000060 /* Assets.xcassets */,
 				A000000000000000000004 /* Models */,
 				A000000000000000000005 /* Services */,
 				A000000000000000000006 /* ViewModels */,
@@ -117,6 +120,7 @@
 			buildPhases = (
 				A000000000000000000011 /* Sources */,
 				A000000000000000000012 /* Frameworks */,
+				A000000000000000000062 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +181,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A000000000000000000062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A000000000000000000061 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		A000000000000000000013 /* Debug */ = {
